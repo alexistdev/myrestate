@@ -1,0 +1,22 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Agent extends Model
+{
+    protected $table = 'agent';
+    protected $primaryKey = 'id_agent';
+
+    public function rumah()
+    {
+        return $this->hasMany('App\Rumah', 'id_agent', 'id_agent');
+    }
+
+
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'id_user', 'id');
+    }
+}
