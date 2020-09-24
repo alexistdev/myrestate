@@ -21,7 +21,7 @@ class TblRumah extends Migration
             $table->string('gambar_rumah', 100);
             $table->integer('status');
             $table->bigInteger('id_kategori')->unsigned();
-            $table->bigInteger('id_agent')->unsigned();
+            $table->unsignedBigInteger('id_agent');
             $table->timestamps();
             $table->foreign('id_agent')->references('id_agent')->on('agent')->onDelete('cascade');
         });
@@ -34,6 +34,6 @@ class TblRumah extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('rumah');
     }
 }
