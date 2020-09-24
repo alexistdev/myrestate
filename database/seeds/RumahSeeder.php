@@ -37,7 +37,7 @@ class RumahSeeder extends Seeder
             'tipe' => '45/72',
             'harga_unit' => 950000000,
             'gambar_rumah' => '707a7ef44323fd5.jpg',
-            'status' => 1
+            'status' => 2
         ]);
     }
 }
