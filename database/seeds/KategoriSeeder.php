@@ -13,18 +13,15 @@ class KategoriSeeder extends Seeder
     {
         \App\Kategori::create([
             'nama_kategori'  => 'APARTEMENT',
-            'deskripsi_kategori' => 'Apartement di Daerah Bandarlampung',
-            'status'  => 1
+            'deskripsi_kategori' => 'Apartement di Daerah Bandarlampung'
         ]);
-        \App\Category::create([
+        \App\Kategori::create([
             'nama_kategori'  => 'RUMAH',
-            'deskripsi_kategori' => 'RUMAH TERJANGKAU',
-            'status'  => 1
+            'deskripsi_kategori' => 'RUMAH TERJANGKAU'
         ]);
-        \App\Category::create([
+        \App\Kategori::create([
             'nama_kategori'  => 'KONTRAKAN',
-            'deskripsi_kategori' => 'kontrakan rumah',
-            'status'  => 1
+            'deskripsi_kategori' => 'kontrakan rumah'
         ]);
     }
 }
