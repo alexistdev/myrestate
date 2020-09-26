@@ -200,7 +200,11 @@
                                     <div class="pr-2 pl-2">
                                         <a href="demo-real-estate-agents-detail.html" class="text-decoration-none">
                                             <span class="agent-thumb">
+                                                @if(!empty($row->detailuser->gambar))
                                                 <img class="img-fluid" src="{{asset('storage/user_photo/'.$row->detailuser->gambar)}}" alt="our Agents" />
+                                                @else
+                                                <img class="img-fluid" src="{{asset('storage/user_photo/default.png')}}" alt="our Agents" />
+                                                @endif
                                             </span>
                                             <span class="agent-infos text-light pt-3">
                                                 <strong class="text-uppercase font-weight-bold">{{$row->detailuser->nama_lengkap}}</strong>

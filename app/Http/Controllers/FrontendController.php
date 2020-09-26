@@ -26,10 +26,12 @@ class FrontendController extends Controller
             ->get()
             ->sortByDesc('id_rumah')
             ->take(6);
-        $ourAgen = User::with(['agen', 'detailuser'])->get();
+        $ourAgen = User::with(['detailuser'])
+            ->join('agent', 'agent.id_user', '=', 'users.id')
+            ->get();
         $ekslusif = Exclusif::with('detailrumah')->get();
         return view('frontend.home', compact('title', 'rumahku', 'jumlah', 'nav', 'settingProduk', 'ourAgen', 'ekslusif'));
-        //return $ourAgen;
+        // return $ourAgen;
     }
 
     /**

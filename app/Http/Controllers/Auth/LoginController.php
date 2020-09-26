@@ -67,7 +67,8 @@ class LoginController extends Controller
             ->get()
             ->sortByDesc('id_rumah')
             ->take(6);
-        $ourAgen = Pengguna::with(['agen', 'detailuser'])->get();
+        // $ourAgen = Pengguna::with(['agen', 'detailuser'])->get();
+        $ourAgen = User::with(['agen', 'detailuser'])->get();
         $ekslusif = Exclusif::with('detailrumah')->get();
         return view('auth.login', compact('title', 'rumahku', 'jumlah', 'nav', 'settingProduk', 'ourAgen', 'ekslusif'));
     }

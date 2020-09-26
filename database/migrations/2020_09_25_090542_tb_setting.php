@@ -15,7 +15,7 @@ class TbSetting extends Migration
     {
         Schema::create('setting', function (Blueprint $table) {
             $table->string('nama_usaha', 30)->nullable();
-            $table->string('level', 50)->nullable();
+            $table->string('email', 50)->nullable();
             $table->string('notelp', 30)->nullable();
             $table->text('alamat')->nullable();
             $table->string('logo', 100)->nullable();

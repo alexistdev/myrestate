@@ -35,11 +35,13 @@ Route::post('unit/API/hapus', 'partner\UnitController@hapusGambar');
 Route::post('unit/API/upload', 'partner\UnitController@uploadGambar');
 
 // Auth::routes();
+// Auth::routes(['register' => false]);
 Route::get('logout', 'Auth\LoginController@logout');
 Route::get('login', [
     'as' => 'login',
     'uses' => 'Auth\LoginController@showLoginForm'
 ]);
+
 Route::post('login', 'Auth\LoginController@login');
 // Route::get('beranda', function () {
 //     // Retrieve a piece of data from the session...
