@@ -96,7 +96,7 @@ class UnitController extends Controller
         $rumah->status = 1;
         $rumah->save();
         $idRumah = $rumah->id_rumah;
-        //detail unit
+        //detail unit 
         $detailUnit = new \App\DetailRumahModel;
         $detailUnit->id_rumah =  $idRumah;
         $detailUnit->alamat_lengkap = $request->alamatLengkap;

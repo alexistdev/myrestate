@@ -13,7 +13,9 @@ class Rumah extends Model
         'nama_unit',
         'tipe',
         'harga_unit',
-        'gambar'
+        'gambar',
+        'id_agent',
+        'id_kategori'
     ];
 
     public function fasilitas()
