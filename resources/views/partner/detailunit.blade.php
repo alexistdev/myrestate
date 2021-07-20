@@ -32,13 +32,12 @@
                                 <!-- Gambar di Ruas Kiri -->
                                 <div class="col-md-6">
                                     <div class="col-12">
-                                        <img src="{{asset('storage/rumah/'.$rumahku->gambar_rumah)}}" class="product-image" alt="Product Image">
+                                        <img src="{{asset('storage/rumah/'.$rumahku->gambar_rumah)}}" id="expandedImg" class="product-image" alt="Product Image">
                                     </div>
                                     <div class="col-12 product-image-thumbs">
-                                        <div class="product-image-thumb active"><img src="{{asset('storage/rumah/'.$rumahku->gambar_rumah)}}" alt="Product Image"></div>
-                                        @foreach($rumahku->gambar as $rows)
-                                        <div class="product-image-thumb"><img src="{{asset('storage/rumah/'.$rows->gambar_unit)}}" alt="Product Image"></div>
-                                        @endforeach
+                                        < @foreach($rumahku->gambar as $rows)
+                                            <div class="product-image-thumb"><img src="{{asset('storage/rumah/'.$rows->gambar_unit)}}" onclick="myFunction(this);" alt=" Product Image"></div>
+                                            @endforeach
                                     </div>
                                 </div>
                                 <!-- Gambar di ruas kanan -->
